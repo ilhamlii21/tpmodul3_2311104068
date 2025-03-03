@@ -1,7 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class KodePos
+public enum DoorState
+{
+    Terkunci,
+    Terbuka
+}
+
+public class DoorMachine
+{
+    private DoorState state;
+
+    public DoorMachine()
+    {
+        state = DoorState.Terkunci;
+        Console.WriteLine("Pintu terkunci");
+    }
+
+    public void BukaPintu()
+    {
+        if (state == DoorState.Terkunci)
+        {
+            state = DoorState.Terbuka;
+            Console.WriteLine("Pintu tidak terkunci");
+        }
+        else
+        {
+            Console.WriteLine("Pintu sudah terbuka");
+        }
+    }
+
+    public void KunciPintu()
+    {
+        if (state == DoorState.Terbuka)
+        {
+            state = DoorState.Terkunci;
+            Console.WriteLine("Pintu terkunci");
+        }
+        else
+        {
+            Console.WriteLine("Pintu sudah terkunci");
+        }
+    }
+}
+
+public class KodePos
 {
     private Dictionary<string, string> tabelKodePos = new Dictionary<string, string>
     {
@@ -18,7 +61,7 @@ class KodePos
         { "Samoja", "40273" }
     };
 
-    public string getKodePos(string kelurahan)
+    public string GetKodePos(string kelurahan)
     {
         if (tabelKodePos.ContainsKey(kelurahan))
         {
@@ -31,16 +74,20 @@ class KodePos
     }
 }
 
-class Program
+public class Program
 {
-    static void Main()
+    public static void Main()
     {
+        DoorMachine pintu = new DoorMachine();
+        pintu.BukaPintu();
+        pintu.KunciPintu();
+
         KodePos kodePos = new KodePos();
 
         Console.Write("Masukkan nama kelurahan: ");
         string inputKelurahan = Console.ReadLine();
 
-        string kode = kodePos.getKodePos(inputKelurahan);
+        string kode = kodePos.GetKodePos(inputKelurahan);
         Console.WriteLine($"Kode Pos untuk {inputKelurahan}: {kode}");
     }
 }
