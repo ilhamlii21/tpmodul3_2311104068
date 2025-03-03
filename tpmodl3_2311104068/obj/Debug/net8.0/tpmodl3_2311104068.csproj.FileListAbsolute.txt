@@ -12,3 +12,4 @@ C:\Users\ASUS\source\repos\tpmodl3_2311104068\tpmodl3_2311104068\obj\Debug\net8.
 C:\Users\ASUS\source\repos\tpmodl3_2311104068\tpmodl3_2311104068\obj\Debug\net8.0\tpmodl3_2311104068.pdb
 C:\Users\ASUS\source\repos\tpmodl3_2311104068\tpmodl3_2311104068\obj\Debug\net8.0\tpmodl3_2311104068.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\tpmodl3_2311104068\tpmodl3_2311104068\obj\Debug\net8.0\ref\tpmodl3_2311104068.dll
+C:\Users\ASUS\source\repos\tpmodl3_2311104068\tpmodl3_2311104068\obj\Debug\net8.0\tpmodl3_2311104068.sourcelink.json
